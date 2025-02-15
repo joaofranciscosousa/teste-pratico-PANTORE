@@ -207,7 +207,7 @@ export default (app: Express) => {
 
         const result: [User[], number] = await userRepository.findAndCount({
           where: filters,
-          relations: ["Permission"],
+          relations: ["permission"],
           skip: Number(perPage * pageNumber - perPage),
           take: perPage,
           order: {

@@ -48,7 +48,6 @@ export class User {
   @ManyToOne(() => Permission, (permission) => permission.user, {
     nullable: false,
   })
-  @Column({ type: "int" })
   permission: Permission | number;
 
   // HOOKS
